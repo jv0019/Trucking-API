@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager API Documentation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="logo">Task Manager API</div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#api-docs">API Docs</a></li>
+            <li><a href="https://github.com/your-repo-link">GitHub</a></li>
+        </ul>
+    </nav>
+
+    <section id="api-docs">
+        <h1>Task Manager API Documentation</h1>
+        <h2>Table of Contents</h2>
+        <ol>
+            <li><a href="#getting-started">Getting Started</a></li>
+            <li><a href="#prerequisites">Prerequisites</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#running-the-application">Running the Application</a></li>
+            <li><a href="#api-endpoints">API Endpoints</a></li>
+            <ul>
+                <li><a href="#create-load">Create Load</a></li>
+                <li><a href="#retrieve-loads">Retrieve Loads</a></li>
+                <li><a href="#retrieve-single-load">Retrieve Single Load</a></li>
+                <li><a href="#update-load">Update Load</a></li>
+                <li><a href="#delete-load">Delete Load</a></li>
+            </ul>
+            <li><a href="#database">Database</a></li>
+            <ul>
+                <li><a href="#database-configuration">Database Configuration</a></li>
+                <li><a href="#database-models">Database Models</a></li>
+            </ul>
+            <li><a href="#schemas">Schemas</a></li>
+            <li><a href="#error-handling">Error Handling</a></li>
+            <li><a href="#testing">Testing</a></li>
+            <li><a href="#contributing">Contributing</a></li>
+            <li><a href="#license">License</a></li>
+        </ol>
+
+        <section id="getting-started">
+            <h2>Getting Started</h2>
+            <p>Instructions for getting started with the project.</p>
+        </section>
+
+        <section id="prerequisites">
+            <h2>Prerequisites</h2>
+            <p>You need to have the following software installed before running the application:</p>
+            <ul>
+                <li>Python 3.8 or higher</li>
+                <li>PostgreSQL</li>
+            </ul>
+        </section>
+
+        <section id="installation">
+            <h2>Installation</h2>
+            <p>Follow these steps to install and set up the application:</p>
+            <ol>
+                <li>Clone the repository:
+                    <pre><code>git clone https://github.com/yourusername/task_manager_api.git</code></pre>
+                </li>
+                <li>Navigate to the project directory:
+                    <pre><code>cd task_manager_api</code></pre>
+                </li>
+                <li>Install the required Python packages:
+                    <pre><code>pip install -r requirements.txt</code></pre>
+                </li>
+            </ol>
+        </section>
+
+        <section id="running-the-application">
+            <h2>Running the Application</h2>
+            <p>To run the application locally, use the following command:</p>
+            <pre><code>python -m flask run</code></pre>
+            <p>The application will be accessible at <a href="http://127.0.0.1:5000" target="_blank">http://127.0.0.1:5000</a>.</p>
+        </section>
+
+        <section id="api-endpoints">
+            <h2>API Endpoints</h2>
+            <section id="create-load">
+                <h3>Create Load</h3>
+                <p><strong>Endpoint:</strong> <code>/load</code></p>
+                <p><strong>Method:</strong> POST</p>
+                <p><strong>Description:</strong> Creates a new load.</p>
+                <pre><code>{
+  "shipperId": "123456789",
+  "description": "Sample load"
+}</code></pre>
+            </section>
+
+            <section id="retrieve-loads">
+                <h3>Retrieve Loads</h3>
+                <p><strong>Endpoint:</strong> <code>/load</code></p>
+                <p><strong>Method:</strong> GET</p>
+                <p><strong>Description:</strong> Retrieves all loads.</p>
+            </section>
+
+            <section id="retrieve-single-load">
+                <h3>Retrieve Single Load</h3>
+                <p><strong>Endpoint:</strong> <code>/load/&lt;load_id&gt;</code></p>
+                <p><strong>Method:</strong> GET</p>
+                <p><strong>Description:</strong> Retrieves a specific load by its ID.</p>
+            </section>
+
+            <section id="update-load">
+                <h3>Update Load</h3>
+                <p><strong>Endpoint:</strong> <code>/load/&lt;load_id&gt;</code></p>
+                <p><strong>Method:</strong> PUT</p>
+                <p><strong>Description:</strong> Updates a specific load.</p>
+            </section>
+
+            <section id="delete-load">
+                <h3>Delete Load</h3>
+                <p><strong>Endpoint:</strong> <code>/load/&lt;load_id&gt;</code></p>
+                <p><strong>Method:</strong> DELETE</p>
+                <p><strong>Description:</strong> Deletes a specific load.</p>
+            </section>
+        </section>
+
+        <section id="database">
+            <h2>Database</h2>
+            <section id="database-configuration">
+                <h3>Database Configuration</h3>
+                <p>The application uses PostgreSQL for data storage. Ensure that your PostgreSQL server is running and that you have created a database for the application.</p>
+            </section>
+
+            <section id="database-models">
+                <h3>Database Models</h3>
+                <p>The database consists of the following models:</p>
+                <ul>
+                    <li>Load: Represents the load data.</li>
+                </ul>
+            </section>
+        </section>
+
+        <section id="schemas">
+            <h2>Schemas</h2>
+            <p>The API uses JSON schemas for request validation.</p>
+        </section>
+
+        <section id="error-handling">
+            <h2>Error Handling</h2>
+            <p>Errors are handled gracefully and return appropriate HTTP status codes.</p>
+        </section>
+
+        <section id="testing">
+            <h2>Testing</h2>
+            <p>To test the application, you can use tools like Postman or run unit tests provided in the tests directory.</p>
+        </section>
+
+        <section id="contributing">
+            <h2>Contributing</h2>
+            <p>Contributions are welcome! Please follow these steps to contribute:</p>
+            <ol>
+                <li>Fork the repository.</li>
+                <li>Create a new branch.</li>
+                <li>Make your changes and commit them.</li>
+                <li>Submit a pull request.</li>
+            </ol>
+        </section>
+
+        <section id="license">
+            <h2>License</h2>
+            <p>This project is licensed under the MIT License.</p>
+        </section>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Task Manager API. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

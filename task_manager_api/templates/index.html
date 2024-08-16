@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="logo">Task Manager API</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="/docs">API Docs</a></li>
+            <li><a href="https://github.com/your-repo-link">GitHub</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="welcome-text">
+            <h1>Welcome to the Task Manager API</h1>
+            <p>Your efficient solution for managing tasks and loads in real-time.</p>
+            <a href="/docs" class="btn">Get Started</a>
+        </div>
+    </header>
+
+    <footer>
+        <p>&copy; 2024 Task Manager API. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
